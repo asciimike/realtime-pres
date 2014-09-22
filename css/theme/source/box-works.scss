@@ -1,0 +1,291 @@
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("font/Gotham-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham Black';
+  src: url("font/Gotham-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url("font/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("font/Gotham-Bold.otf") format("opentype");
+}
+
+$white: #ffffff;
+$black: #000000;
+$super-black: #02010F;
+
+$azucar: #185689;
+$darkcar: #1b5e96;
+$darkercar: #154a75;
+$bumble-bee: #ffd641;
+$swift: #F08E38;
+
+$slate: #322f31;
+$shale: #1d1d1e;
+$discs: #fec324;
+$keylime: #acfd5b;
+$tarheel: #50b1ff;
+$rebel: #ff6450;
+$pride: #b650ff;
+$cream: #fffbf3;
+
+$slate-dark: #154a75;
+$bumble-mid: #fedd7b;
+$bumble-dark: #c5a530;
+
+
+$font: 'Gotham Book', Arial;
+$mainFont: "Gotham Book",sans-serif;
+
+$brand-primary: $tarheel;
+$brand-warning: $discs;
+$brand-danger: $rebel;
+
+///////////////////////////////////////////
+
+
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #F0F0F0;
+
+// Primary/body text
+$mainFont: $mainFont;
+$mainFontSize: 52px;
+$mainColor: #555254;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: $font;
+$headingColor: $super-black;
+$headingLineHeight: 1em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$heading1TextShadow: $headingTextShadow;
+$headingFontWeight: bold;
+
+// Links and actions
+$linkColor: $darkcar;
+$linkColorHover: $darkercar;
+
+// Text selection
+$selectionBackgroundColor: $tarheel;
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
+
+.text-swift {
+  color: $swift !important;
+}
+
+.text-discs {
+  color: $discs !important;
+}
+
+.text-tarheel {
+  color: $tarheel;
+}
+
+.text-rebel {
+  color: $rebel;
+}
+
+.text-darkcar {
+  color: $darkcar !important;
+}
+
+.text-slate {
+  color: $slate !important;
+}
+
+.text-cream {
+  color: $cream !important;
+}
+
+.text-large {
+  font-size: 104px !important;
+  line-height: 208px !important;
+}
+
+.text-medium {
+  font-size: 62px !important;
+  line-height: 124px !important;
+}
+
+.text-small {
+  font-size: 42px !important;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  text-shadow: none !important;
+}
+
+img.flash-bump {
+  margin-top: 80px !important;
+}
+
+.small-list {
+  li {
+    font-size: 32px !important;
+    font-weight: bold;
+    line-height: 64px !important;
+    list-style-type: none !important;
+  }
+}
+
+.medium-list {
+  li {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 104px !important;
+    list-style-type: none !important;
+    margin-bottom: 40px;
+  }
+}
+
+.big-list {
+  li {
+    font-size: 72px !important;
+    font-weight: bold;
+    line-height: 144px !important;
+    list-style-type: none !important;
+  }
+}
+
+.slides {
+  section {
+    //h1, h2, h3, h4, h5 {
+      //text-transform: uppercase;
+    //}
+    p {
+      //font-weight: bold;
+      line-height: $mainFontSize * 2;
+    }
+    h1, h2 {
+      margin-bottom: 80px;
+    }
+  }
+
+  blockquote {
+    font-style: normal;
+  }
+
+  pre {
+    width: 100%;
+
+    code {
+      font-size: 34px;
+      line-height: 45px;
+      max-height: 600px;
+    }
+  }
+
+}
+
+img {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.framework-logo {
+  height: 20%;
+  width: 20%;
+}
+
+.side-hero {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 80px !important;
+}
+
+.side-by {
+  display: inline-block;
+}
+
+.vtop {
+  vertical-align: top !important;
+}
+
+img[src="/images/app-facing.gif"]#hero-img {
+  width: 65%;
+  margin-top: 275px !important;
+}
+
+img[src="/images/yo-pirates.gif"]#hero-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img[src="/images/backend-reqs.gif"] {
+  width: 85%;
+  position: relative;
+  right: 50px;
+}
+
+img[src="/images/simple-api.png"] {
+  max-height: 60%;
+}
+
+img[src="/images/firebase-website.png"] {
+  max-height: 85%;
+}
+
+img[src="/images/dash-reqs.gif"]#hero-img {
+  height: 65%;
+  margin-top: 300px !important;
+}
+
+img[src="/images/dash-reqs.gif"] {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+img[src="/images/rest-api.gif"] {
+  max-height: 65%;
+  max-width: 65%;
+}
+
+img[src="/images/lob-app.gif"], img[src="/images/data-sync.gif"], img[src="/images/yo-full.gif"], img[src="/images/yo-socket.gif"] {
+  max-height: 75%;
+  max-width: 75%;
+  padding: 20px;
+}
+
+img[src="/images/dashstart.gif"]#hero-img {
+  height: 75%;
+  margin-top: 200px !important;
+}
+
+img[src="/images/1-old.gif"]#hero-img {
+  margin-top: 330px !important;
+}
+
+img[src="/images/2-old.gif"]#hero-img {
+  margin-top: 250px !important;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
