@@ -1,1 +1,1 @@
-# Give your apps superpowers with Firebase
+# What Realtime Data Means
